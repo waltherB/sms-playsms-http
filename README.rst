@@ -30,7 +30,7 @@ If you spotted it first, help us smashing it by providing a detailed and welcome
 
 Do not contact contributors directly about support or help with technical issues.
 
-Credits to the original contribitors at OCA
+Credits to the original contributors at OCA
 =======
 
 Authors
