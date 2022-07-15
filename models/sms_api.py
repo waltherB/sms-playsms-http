@@ -8,7 +8,8 @@ import requests
 from odoo import _, api, models
 from odoo.exceptions import UserError
 
-PLAYSMS_HTTP_ENDPOINT = 'http://192.168.10.220:8008/index.php?app=ws'
+# PLAYSMS_HTTP_ENDPOINT = 'http://192.168.10.220:8008/index.php?app=ws'
+PLAYSMS_HTTP_ENDPOINT = account.sms_playsms_http_endpoint
 
 
 class SmsApi(models.AbstractModel):
