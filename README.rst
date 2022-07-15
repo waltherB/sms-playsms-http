@@ -3,7 +3,7 @@ Sms OVH HTTP
 ============
 
 A modification of the original Implementation of **OVH http2sms API** for sending sms from OCA.
-This module depend of odoo native **sms** module it only implement PlaySMS <https://playsms.org> as provider instead of odoo SA.
+This module depend of odoo native **sms** module it only implement `PlaySMS <https://playsms.org>` as provider instead of odoo SA.
 
 **Table of contents**
 
