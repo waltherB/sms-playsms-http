@@ -8,15 +8,12 @@ import requests
 from odoo import _, api, models
 from odoo.exceptions import UserError
 
+PLAYSMS_HTTP_ENDPOINT = "http://192.168.10.220:8008/index.php?app=ws"
+
 
 class SmsApi(models.AbstractModel):
     _inherit = "sms.api"
 
-    def _sms_playsms_endpoint(self, account):
-        return {
-                "PLAYSMS_HTTP_ENDPOINT" = account.sms_playsms_http_endpoint,
-        }        
-        
     def _prepare_playsms_http_params(self, account, number, message):
         return {
             "h": account.sms_playsms_http_webtoken,
@@ -39,7 +36,7 @@ class SmsApi(models.AbstractModel):
             return "wrong_number_format"
         account = self._get_sms_account()
         r = requests.get(
-            self._prepare_playsms_endpoint(account),
+            PLAYSMS_HTTP_ENDPOINT,
             params=self._prepare_playsms_http_params(account, number, message),
         )
         response = r.text
