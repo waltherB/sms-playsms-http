@@ -12,7 +12,7 @@ class IapAccount(models.Model):
         selection_add=[("sms_playsms_http", "SMS PlaySMS http")],
         ondelete={"sms_playsms_http": "cascade"},
     )
-    sms_playsms_http_endpoint = fields.Char(strings="PlaySMS Endpoint", default='http://localhost/playsms/index.php?app=ws')
+    sms_playsms_http_endpoint = fields.Char(string="PlaySMS Endpoint", default='http://localhost/playsms/index.php?app=ws')
     sms_playsms_http_webtoken = fields.Char(string="Webtoken")
     sms_playsms_http_login = fields.Char(string="Login")
     sms_playsms_http_password = fields.Char(string="Password")
