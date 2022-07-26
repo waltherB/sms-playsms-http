@@ -40,9 +40,11 @@ class SmsApi(models.AbstractModel):
             params=self._prepare_playsms_http_params(account, number, message),
         )
         response = r.text
-        if response[0:2] != "OK":
+        #if response[0:2] != "OK":
+        if not r:
             self.env["sms.sms"].browse(sms_id).error_detail = response
             return "server_error"
+        else:
         return "success"
 
     def _is_sent_with_playsms(self):
