@@ -15,6 +15,7 @@ Configuration
 
 To configure this module, you need to:
 
+* You need to set your playsms http end point i models/sms_api.py before installing module in odoo (will fix that whwn I get some help with python :-) )
 * Go to IAP menu
 * Create a new account with **SMS OVH HTTP** as provider
 * Fill your account information
