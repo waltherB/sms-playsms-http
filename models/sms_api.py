@@ -45,7 +45,7 @@ class SmsApi(models.AbstractModel):
             self.env["sms.sms"].browse(sms_id).error_detail = response
             return "server_error"
         else:
-        return "success"
+            return "success"
 
     def _is_sent_with_playsms(self):
         return self._get_sms_account().provider == "sms_playsms_http"
