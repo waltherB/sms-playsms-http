@@ -13,6 +13,7 @@
                     <field name="sms_playsms_http_endpoint" />
                     <field name="sms_playsms_http_webtoken" />
                     <field name="sms_playsms_http_login" />
+                    <field name="sms_playsms_http_password" />
                     <field name="sms_playsms_http_from" />
 
                 </group>
