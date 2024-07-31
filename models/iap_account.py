@@ -23,7 +23,7 @@ class IapAccount(models.Model):
     sms_api_username = fields.Char(help="PlaySMS username")
     sms_api_password = fields.Char(help="PlaySMS webtoken")
     sms_api_from = fields.Char(help="Sender number, Sender ID or description")
-    sms_api_min_tokens = fields.Integer(string="Minimum credits", help="Minimum credit level for alerting purposes. If it is 0 or a negative number, the alarming is disabled.")
+    sms_api_min_tokens = fields.Integer(string="Minimum credits", help="Minimum credit level for alerting purposes. If it is a negative number, the alarming is disabled.")
 
     @api.model
     def _default_sms_api_token_notification_action(self):
@@ -43,7 +43,7 @@ class IapAccount(models.Model):
 
         iap_account = self._get_sms_account()
 
-        if iap_account.sms_api_min_tokens < 1:
+        if iap_account.sms_api_min_tokens < 0:
             _logger.info(f"PlaySMS minimum credits not set. Skipping balance check.")
             return
 

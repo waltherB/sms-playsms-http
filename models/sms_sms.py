@@ -85,16 +85,16 @@ class Sms(models.Model):
         )
 
         response_content = response.json()  # Parse the JSON response
-        _logger.debug(f"PlaySMS credit balance check responded with: {response_content}")
+        _logger.debug(f"PlaySMS responded with: {response_content}")
 
         if response_content['data'][0]['status'] == "OK":
             _logger.info("SMS sent successfully")
             self.sms_api_error = False
             return "success"
     
-        #error_code = response_content['data'][0]['error']
+        error_code = response_content.get("error")
         error_msg = response_content.get("error_string")
-        _logger.warning(f"Failed to send SMS: {error_msg}")
+        _logger.warning(f"Failed to send SMS: {error_code} : {error_msg}")
 
         self.sms_api_error = error_msg
         return error_msg
