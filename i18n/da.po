@@ -1,0 +1,355 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* sms-playsms-http
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 17.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-07-30 13:25+0000\n"
+"PO-Revision-Date: 2024-07-31 11:44+0200\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: da\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.4.4\n"
+
+#. module: sms-playsms-http
+#: model:ir.model.fields,field_description:sms-playsms-http.field_iap_account__message_needaction
+msgid "Action Needed"
+msgstr "Handling krævet"
+
+#. module: sms-playsms-http
+#: model:ir.model.fields,help:sms-playsms-http.field_iap_account__sms_api_token_notification_action
+msgid ""
+"Action to be performed when the number of credits is less than min_tokens."
+msgstr ""
+"Handling der bliver udført når antallet af credits er mindre end min_tokens."
+
+#. module: sms-playsms-http
+#: model:ir.model.fields,field_description:sms-playsms-http.field_iap_account__activity_ids
+msgid "Activities"
+msgstr "Aktiviteter"
+
+#. module: sms-playsms-http
+#: model:ir.model.fields,field_description:sms-playsms-http.field_iap_account__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr "Activity Exception Decoration"
+
+#. module: sms-playsms-http
+#: model:ir.model.fields,field_description:sms-playsms-http.field_iap_account__activity_state
+msgid "Activity State"
+msgstr "Aktivitet Status"
+
+#. module: sms-playsms-http
+#: model:ir.model.fields,field_description:sms-playsms-http.field_iap_account__activity_type_icon
+msgid "Activity Type Icon"
+msgstr "Activity Type Icon"
+
+#. module: sms-playsms-http
+#: model:ir.model.fields,field_description:sms-playsms-http.field_iap_account__message_attachment_count
+msgid "Attachment Count"
+msgstr "Antal vedhæftninger"
+
+#. module: sms-playsms-http
+#: model:ir.model.fields,field_description:sms-playsms-http.field_iap_account__sms_api_playsms_connection_status
+msgid "Connection status"
+msgstr "Status forbindelse"
+
+#. module: sms-playsms-http
+#: model:ir.model.fields,field_description:sms-playsms-http.field_sms_resend_recipient__failure_reason
+msgid "Error Description"
+msgstr "Fejl beskrivelse"
+
+#. module: sms-playsms-http
+#: model_terms:ir.ui.view,arch_db:sms-playsms-http.mail_resend_message_view_form
+msgid "Failure Description"
+msgstr "Fejl beskrivelse"
+
+#. module: sms-playsms-http
+#: model:ir.model.fields,field_description:sms-playsms-http.field_iap_account__message_follower_ids
+msgid "Followers"
+msgstr "Følgere"
+
+#. module: sms-playsms-http
+#: model:ir.model.fields,field_description:sms-playsms-http.field_iap_account__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "Følgere (Partnere)"
+
+#. module: sms-playsms-http
+#: model:ir.model.fields,help:sms-playsms-http.field_iap_account__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr "Font awesome icon e.g. fa-tasks"
+
+#. module: sms-playsms-http
+#: model_terms:ir.ui.view,arch_db:sms-playsms-http.iap_account_view_form
+msgid "From"
+msgstr "Fra"
+
+#. module: sms-playsms-http
+#: model:ir.model.fields,field_description:sms-playsms-http.field_iap_account__has_message
+msgid "Has Message"
+msgstr "Har besked"
+
+#. module: sms-playsms-http
+#: model:ir.model,name:sms-playsms-http.model_iap_account
+msgid "IAP Account"
+msgstr "IAP Account"
+
+#. module: sms-playsms-http
+#: model:ir.model.fields,field_description:sms-playsms-http.field_iap_account__activity_exception_icon
+msgid "Icon"
+msgstr "Ikon"
+
+#. module: sms-playsms-http
+#: model:ir.model.fields,help:sms-playsms-http.field_iap_account__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr "Icon to indicate an exception activity."
+
+#. module: sms-playsms-http
+#: model:ir.model.fields,help:sms-playsms-http.field_iap_account__message_needaction
+msgid "If checked, new messages require your attention."
+msgstr "Hvis valgt, nye beskeder kræver din opmærksomhed."
+
+#. module: sms-playsms-http
+#: model:ir.model.fields,help:sms-playsms-http.field_iap_account__message_has_error
+#: model:ir.model.fields,help:sms-playsms-http.field_iap_account__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr "Hvis valgt, nogle beskeder har en fejl levering."
+
+#. module: sms-playsms-http
+#: model:ir.model.fields,field_description:sms-playsms-http.field_iap_account__message_is_follower
+msgid "Is Follower"
+msgstr "Er følger"
+
+#. module: sms-playsms-http
+#: model:ir.model.fields,field_description:sms-playsms-http.field_iap_account__message_has_error
+msgid "Message Delivery error"
+msgstr "Fejl ved levering af besked"
+
+#. module: sms-playsms-http
+#: model:ir.model.fields,field_description:sms-playsms-http.field_iap_account__message_ids
+msgid "Messages"
+msgstr "Beskeder"
+
+#. module: sms-playsms-http
+#: model:ir.model.fields,help:sms-playsms-http.field_iap_account__sms_api_min_tokens
+msgid ""
+"Minimum credit level for alerting purposes. If it is 0 or a negative number, "
+"the alarming is disabled."
+msgstr ""
+"Minimun credits til brug for alarmering. Hvis sat til 0 eller et negativt "
+"nummer alarmeres ikke."
+
+#. module: sms-playsms-http
+#: model:ir.model.fields,field_description:sms-playsms-http.field_iap_account__sms_api_min_tokens
+msgid "Minimum credits"
+msgstr "Minimum credits"
+
+#. module: sms-playsms-http
+#: model:ir.model.fields,field_description:sms-playsms-http.field_iap_account__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr "Min Aktivitets deadline"
+
+#. module: sms-playsms-http
+#: model:ir.model.fields,field_description:sms-playsms-http.field_iap_account__activity_calendar_event_id
+msgid "Next Activity Calendar Event"
+msgstr "Næste Kalender Aktivitet"
+
+#. module: sms-playsms-http
+#: model:ir.model.fields,field_description:sms-playsms-http.field_iap_account__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "Næste Aktivitet Deadline"
+
+#. module: sms-playsms-http
+#: model:ir.model.fields,field_description:sms-playsms-http.field_iap_account__activity_summary
+msgid "Next Activity Summary"
+msgstr "Næste Aktivitet sammenfatning"
+
+#. module: sms-playsms-http
+#: model:ir.model.fields,field_description:sms-playsms-http.field_iap_account__activity_type_id
+msgid "Next Activity Type"
+msgstr "Næste Aktivitet type"
+
+#. module: sms-playsms-http
+#: model:ir.model.fields,field_description:sms-playsms-http.field_iap_account__message_needaction_counter
+msgid "Number of Actions"
+msgstr "Antal hændelser"
+
+#. module: sms-playsms-http
+#: model:ir.model.fields,field_description:sms-playsms-http.field_iap_account__message_has_error_counter
+msgid "Number of errors"
+msgstr "Antal fejl"
+
+#. module: sms-playsms-http
+#: model:ir.model.fields,help:sms-playsms-http.field_iap_account__message_needaction_counter
+msgid "Number of messages requiring action"
+msgstr "Antal beskeder der kræver handling"
+
+#. module: sms-playsms-http
+#: model:ir.model.fields,help:sms-playsms-http.field_iap_account__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "Antal beskeder med leverings fejl"
+
+#. module: sms-playsms-http
+#: model:ir.model,name:sms-playsms-http.model_sms_sms
+msgid "Outgoing SMS"
+msgstr "Udgående SMS"
+
+#. module: sms-playsms-http
+#: model:ir.model.fields.selection,name:sms-playsms-http.selection__iap_account__provider__sms_api_playsms
+msgid "PlaySMS"
+msgstr "PlaySMS"
+
+#. module: sms-playsms-http
+#: model_terms:ir.ui.view,arch_db:sms-playsms-http.iap_account_view_form
+msgid "PlaySMS account"
+msgstr "PlaySMS konto"
+
+#. module: sms-playsms-http
+#: model:ir.model.fields,help:sms-playsms-http.field_iap_account__sms_api_url
+msgid "PlaySMS url eg.: https://playsms.example.com/index.php?app=ws"
+msgstr "PlaySMS URL f.eks.: https://playsms.example.com/index.php?app=ws"
+
+#. module: sms-playsms-http
+#: model:ir.model.fields,help:sms-playsms-http.field_iap_account__sms_api_username
+msgid "PlaySMS username"
+msgstr "PlaySMS brugernavn"
+
+#. module: sms-playsms-http
+#: model:ir.model.fields,help:sms-playsms-http.field_iap_account__sms_api_password
+msgid "PlaySMS webtoken"
+msgstr "PlaySMS webtoken"
+
+#. module: sms-playsms-http
+#: model:ir.actions.server,name:sms-playsms-http.ir_cron_check_tokens_ir_actions_server
+msgid "PlaySMS: Check credit balance"
+msgstr "PlaySMS: Check credit balance"
+
+#. module: sms-playsms-http
+#: model:ir.actions.server,name:sms-playsms-http.model_iap_account_action_low_tokens
+msgid "PlaySMS: notify when low on credits"
+msgstr "PlaySMS: besked ved lav antal credits"
+
+#. module: sms-playsms-http
+#: model:ir.model.fields,field_description:sms-playsms-http.field_iap_account__provider
+msgid "Provider"
+msgstr "Provider"
+
+#. module: sms-playsms-http
+#: model:ir.model.fields,field_description:sms-playsms-http.field_iap_account__rating_ids
+msgid "Ratings"
+msgstr "Ratings"
+
+#. module: sms-playsms-http
+#: model:ir.model,name:sms-playsms-http.model_sms_resend_recipient
+msgid "Resend Notification"
+msgstr "Gensend besked"
+
+#. module: sms-playsms-http
+#: model:ir.model.fields,field_description:sms-playsms-http.field_iap_account__activity_user_id
+msgid "Responsible User"
+msgstr "Ansvarlig bruger"
+
+#. module: sms-playsms-http
+#: model:ir.model.fields,field_description:sms-playsms-http.field_iap_account__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr "SMS Leveringsfejl"
+
+#. module: sms-playsms-http
+#: model:ir.model.fields,help:sms-playsms-http.field_iap_account__sms_api_from
+msgid "Sender number, Sender ID or description"
+msgstr "Afedner nummer, Sender ID eller beskrivelse"
+
+#. module: sms-playsms-http
+#: model:ir.model.fields,field_description:sms-playsms-http.field_sms_sms__sms_api_error
+msgid "Sms Api Error"
+msgstr "Sms Api Fejl"
+
+#. module: sms-playsms-http
+#: model:ir.model.fields,field_description:sms-playsms-http.field_iap_account__sms_api_from
+msgid "Sms Api From"
+msgstr "Sms Api Fra"
+
+#. module: sms-playsms-http
+#: model:ir.model.fields,field_description:sms-playsms-http.field_iap_account__sms_api_password
+msgid "Sms Api Password"
+msgstr "Sms Api webtoken"
+
+#. module: sms-playsms-http
+#: model:ir.model.fields,field_description:sms-playsms-http.field_iap_account__sms_api_url
+msgid "Sms Api Url"
+msgstr "Sms Api Url"
+
+#. module: sms-playsms-http
+#: model:ir.model.fields,field_description:sms-playsms-http.field_iap_account__sms_api_username
+msgid "Sms Api Username"
+msgstr "Sms Ali Brugernavn"
+
+#. module: sms-playsms-http
+#: model:ir.model.fields,help:sms-playsms-http.field_iap_account__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+
+#. module: sms-playsms-http
+#: model:ir.model.fields,help:sms-playsms-http.field_iap_account__sms_api_playsms_connection_status
+msgid "Status of the last connection test."
+msgstr "Status af sidste forbindelses test."
+
+#. module: sms-playsms-http
+#: model_terms:ir.ui.view,arch_db:sms-playsms-http.iap_account_view_form
+msgid "Test Connection"
+msgstr "Test forbindelse"
+
+#. module: sms-playsms-http
+#: model:ir.model.fields,field_description:sms-playsms-http.field_iap_account__sms_api_token_notification_action
+msgid "Token notification action"
+msgstr "Token notifikation aktivitet"
+
+#. module: sms-playsms-http
+#: model:ir.model.fields,help:sms-playsms-http.field_iap_account__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr "Type of the exception activity on record."
+
+#. module: sms-playsms-http
+#. odoo-python
+#: code:addons/sms-playsms-http/models/iap_account.py:0
+#, python-format
+msgid "Unexpected error. Check server log for more info."
+msgstr "Ukendt fejl. Kontolelr server log for mere information."
+
+#. module: sms-playsms-http
+#: model_terms:ir.ui.view,arch_db:sms-playsms-http.iap_account_view_form
+msgid "Url of PlaySMS server"
+msgstr "PlaySMS server URL"
+
+#. module: sms-playsms-http
+#: model_terms:ir.ui.view,arch_db:sms-playsms-http.iap_account_view_form
+msgid "Username"
+msgstr "Brugernavn"
+
+#. module: sms-playsms-http
+#: model:ir.model.fields,field_description:sms-playsms-http.field_iap_account__website_message_ids
+msgid "Website Messages"
+msgstr "Webside beskeder"
+
+#. module: sms-playsms-http
+#: model:ir.model.fields,help:sms-playsms-http.field_iap_account__website_message_ids
+msgid "Website communication history"
+msgstr "Webside kommunikationshistorie"
+
+#. module: sms-playsms-http
+#: model_terms:ir.ui.view,arch_db:sms-playsms-http.iap_account_view_form
+msgid "Webtoken"
+msgstr "Webtoken"
