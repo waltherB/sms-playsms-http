@@ -6,6 +6,8 @@ import logging
 import requests
 
 _logger = logging.getLogger(__name__)
+logging.basicConfig(level=logging.DEBUG)
+
 
 SMS_API_URL = 'https://sms.gundogpro.dk/index.php?app=ws'
 
@@ -56,7 +58,7 @@ class IapAccount(models.Model):
         except Exception as e:
             _logger.warning(f"An exception occurred while attempting to get current credit balance: {e}")
         else:
-            if api_credits < iap_account.sms_api_min_tokens:
+            if int(api_credits) < int(iap_account.sms_api_min_tokens):
                 _logger.info(f"You only have {api_credits} PlaySMS credits left.")
                 ctx = dict(self.env.context or {})
                 ctx.update({'active_id': iap_account.id, 'active_model': 'iap.account'})

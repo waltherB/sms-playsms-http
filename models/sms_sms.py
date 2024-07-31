@@ -7,6 +7,7 @@ import requests
 from odoo.addons.sms.tools.sms_api import SmsApi
 
 _logger = logging.getLogger(__name__)
+logging.basicConfig(level=logging.DEBUG)
 
 SMS_API_PLAYSMS_URL = "https://sms.gundogpro.dk/index.php?app=ws"
 
@@ -92,7 +93,7 @@ class Sms(models.Model):
             return "success"
     
         #error_code = response_content['data'][0]['error']
-        error_msg = response_content['data'][0]['error_string']
+        error_msg = response_content.get("error_string")
         _logger.warning(f"Failed to send SMS: {error_msg}")
 
         self.sms_api_error = error_msg
