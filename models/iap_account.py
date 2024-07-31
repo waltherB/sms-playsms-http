@@ -7,6 +7,8 @@ import requests
 
 _logger = logging.getLogger(__name__)
 
+SMS_API_URL = 'https://sms.gundogpro.dk/index.php?app=ws'
+
 class IapAccount(models.Model):
     _name = "iap.account"
     _inherit = ['iap.account', 'mail.thread', 'mail.activity.mixin']
@@ -31,10 +33,8 @@ class IapAccount(models.Model):
         else:
             return default_action
 
-    sms_api_token_notification_action = fields.Many2one('ir.actions.server', default=_default_sms_api_token_notification_action, string="Token notification action", help="Action to be performed when the number of credits is less than min_tokens.")
+    sms_api_token_notification_action = fields.Many2one('ir.actions.server', default=_default_sms_api_token_notification_action, string="Credits notification action", help="Action to be performed when the number of credits is less than min_tokens.")
     sms_api_playsms_connection_status = fields.Char(string="Connection status", help="Status of the last connection test.")
-
-
     @api.model
     def check_sms_api_playsms_credit_balance(self):
         """If current credits are lower than sms_api_min_tokens, execute sms_api_token_notification_action"""
@@ -64,7 +64,6 @@ class IapAccount(models.Model):
             else:
                 _logger.info(f"You have {api_credits} PlaySMS credits, which is more than your set minimum of {iap_account.sms_api_min_tokens} credits")
 
-
     def _prepare_sms_api_playsms_credit_check_params(self):
         self.ensure_one()
 
@@ -79,12 +78,18 @@ class IapAccount(models.Model):
     def get_current_credit_balance(self):
 
         iap_account_sms = self.env['iap.account']._get_sms_account()
-        
+
+        #response = requests.get(
+        #    SMS_API_URL,
+        #    params=self._prepare_sms_api_playsms_credit_check_params(),
+        #)
+
         response = requests.get(
             iap_account_sms.sms_api_url,
             params=self._prepare_sms_api_playsms_credit_check_params(),
         )
-
+        #_logger.debug(f"URL from iap_account: {SMS_API_URL} . Paramerters: {params}")
+        
         response_content = response.json()  # Parse the JSON response
         _logger.debug(f"PlaySMS credit balance check responded with: {response_content}")
 
@@ -115,6 +120,7 @@ class IapAccount(models.Model):
             iap_account.sms_api_playsms_connection_status = e
         except Exception as e:
             _logger.warning(f"An exception occurred while attempting to get current credit balance: {e}")
+            #_logger.debug(f"URL from iap_account: {iap_account_sms.sms_api_url} . Paramerters: {params}")
             iap_account.sms_api_playsms_connection_status = _("Unexpected error. Check server log for more info.")
         else:
             _logger.info("PlaySMS connection test successful")

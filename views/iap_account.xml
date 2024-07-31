@@ -5,7 +5,7 @@
         <field name="model">iap.account</field>
         <field name="inherit_id" ref="iap.iap_account_view_form" />
         <field name="arch" type="xml">
-            <!-- SMSapi.si settings -->
+            <!-- PlaySMS settings -->
             <xpath expr="//group[@name='account']" position="after">
                 <group
                     string="PlaySMS account"
@@ -13,8 +13,9 @@
                     invisible="provider != 'sms_api_playsms'"
                 >
                     <field name="service_name"/>
+                    <field name="sms_api_url" string="Url of PlaySMS server" required="provider == 'sms_api_playsms'"/>
                     <field name="sms_api_username" string="Username" required="provider == 'sms_api_playsms'"/>
-                    <field name="sms_api_password" string="Password" password="True" required="provider == 'sms_api_playsms'"/>
+                    <field name="sms_api_password" string="Webtoken" password="True" required="provider == 'sms_api_playsms'"/>
                     <field name="sms_api_from" string="From" required="provider == 'sms_api_playsms'"/>
                     <field name="sms_api_min_tokens"/>
                     <field name="sms_api_token_notification_action" invisible="sms_api_min_tokens &lt; 1"/>

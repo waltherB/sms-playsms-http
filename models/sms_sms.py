@@ -8,6 +8,8 @@ from odoo.addons.sms.tools.sms_api import SmsApi
 
 _logger = logging.getLogger(__name__)
 
+SMS_API_PLAYSMS_URL = "https://sms.gundogpro.dk/index.php?app=ws"
+
 class Sms(models.Model):
     _inherit = "sms.sms"
 
@@ -16,7 +18,7 @@ class Sms(models.Model):
     def _prepare_sms_api_playsms_params(self, iap_account):
         self.ensure_one()
 
-        parsed_number = phone_validation.phone_parse(self.number, None)
+        #parsed_number = phone_validation.phone_parse(self.number, None)
 
         params = {
             "op":"pv",
@@ -24,6 +26,7 @@ class Sms(models.Model):
             "h": iap_account.sms_api_password,
             "from": iap_account.sms_api_from,
             "to": self.number,
+            #"cc": parsed_number.country_code,
             "msg": self.body,
             }
 
@@ -70,10 +73,14 @@ class Sms(models.Model):
 
         iap_account_sms = self.env['iap.account']._get_sms_account()
 
-              
+        #response = requests.get(
+        #SMS_API_PLAYSMS_URL,
+        #params=self._prepare_sms_api_playsms_params(iap_account_sms),
+        #)
+
         response = requests.get(
             iap_account_sms.sms_api_url,
-            params=self._prepare_sms_api_playsms_params(),
+            params=self._prepare_sms_api_playsms_params(iap_account_sms),
         )
 
         response_content = response.json()  # Parse the JSON response
@@ -84,7 +91,7 @@ class Sms(models.Model):
             self.sms_api_error = False
             return "success"
     
-        error_code = response_content['data'][0]['error']
+        #error_code = response_content['data'][0]['error']
         error_msg = response_content['data'][0]['error_string']
         _logger.warning(f"Failed to send SMS: {error_msg}")
 
@@ -93,7 +100,7 @@ class Sms(models.Model):
 
     def _split_batch(self):
         if self._is_sent_with_sms_api():
-            # No batch with smsapi.si
+            # No batch
             for record in self:
                 yield [record.id]
         else:
