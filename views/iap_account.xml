@@ -18,7 +18,7 @@
                     <field name="sms_api_password" string="Webtoken" password="True" required="provider == 'sms_api_playsms'"/>
                     <field name="sms_api_from" string="From" required="provider == 'sms_api_playsms'"/>
                     <field name="sms_api_min_tokens"/>
-                    <field name="sms_api_token_notification_action" invisible="sms_api_min_tokens &lt; 1"/>
+                    <field name="sms_api_token_notification_action" invisible="sms_api_min_tokens &lt; 0"/>
                     <field name="sms_api_playsms_connection_status" invisible="sms_api_playsms_connection_status == False" readonly="True"/>
                     <button name="sms_api_playsms_connection_test" string="Test Connection" type="object" class="oe_highlight"/>
                 </group>

@@ -9,8 +9,6 @@ from odoo.addons.sms.tools.sms_api import SmsApi
 _logger = logging.getLogger(__name__)
 logging.basicConfig(level=logging.DEBUG)
 
-SMS_API_PLAYSMS_URL = "https://sms.gundogpro.dk/index.php?app=ws"
-
 class Sms(models.Model):
     _inherit = "sms.sms"
 

@@ -8,9 +8,6 @@ import requests
 _logger = logging.getLogger(__name__)
 logging.basicConfig(level=logging.DEBUG)
 
-
-SMS_API_URL = 'https://sms.gundogpro.dk/index.php?app=ws'
-
 class IapAccount(models.Model):
     _name = "iap.account"
     _inherit = ['iap.account', 'mail.thread', 'mail.activity.mixin']
@@ -23,7 +20,7 @@ class IapAccount(models.Model):
     sms_api_username = fields.Char(help="PlaySMS username")
     sms_api_password = fields.Char(help="PlaySMS webtoken")
     sms_api_from = fields.Char(help="Sender number, Sender ID or description")
-    sms_api_min_tokens = fields.Integer(string="Minimum credits", help="Minimum credit level for alerting purposes. If it is a negative number, the alarming is disabled.")
+    sms_api_min_tokens = fields.Integer(string="Minimum credits", help="Minimum credit level for alerting purposes. If it is a negative number, e.g. -1, the alarming is disabled.")
 
     @api.model
     def _default_sms_api_token_notification_action(self):
@@ -122,7 +119,6 @@ class IapAccount(models.Model):
             iap_account.sms_api_playsms_connection_status = e
         except Exception as e:
             _logger.warning(f"An exception occurred while attempting to get current credit balance: {e}")
-            #_logger.debug(f"URL from iap_account: {iap_account_sms.sms_api_url} . Paramerters: {params}")
             iap_account.sms_api_playsms_connection_status = _("Unexpected error. Check server log for more info.")
         else:
             _logger.info("PlaySMS connection test successful")
