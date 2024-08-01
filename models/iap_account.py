@@ -21,13 +21,12 @@ class IapAccount(models.Model):
     sms_api_password = fields.Char(help="PlaySMS webtoken")
     sms_api_from = fields.Char(help="Sender number, Sender ID or description")
     sms_api_min_tokens = fields.Integer(string="Minimum credits", help="Minimum credit level for alerting purposes. If it is a negative number, e.g. -1, the alarming is disabled.")
-
     @api.model
     def _default_sms_api_token_notification_action(self):
         try:
-            default_action = self.env.ref('smsapisi_connector.model_iap_account_action_low_tokens').id
+            default_action = self.env.ref('playsms_connector.model_iap_account_action_low_tokens').id
         except ValueError:
-            _logger.warning("smsapisi_connector.model_iap_account_action_low_tokens doesn't exist - notification action will have no default.")
+            _logger.warning("playsms_connector.model_iap_account_action_low_tokens doesn't exist - notification action will have no default.")
             return None
         else:
             return default_action
@@ -73,22 +72,15 @@ class IapAccount(models.Model):
         }
 
         return params
-
     def get_current_credit_balance(self):
 
         iap_account_sms = self.env['iap.account']._get_sms_account()
-
-        #response = requests.get(
-        #    SMS_API_URL,
-        #    params=self._prepare_sms_api_playsms_credit_check_params(),
-        #)
 
         response = requests.get(
             iap_account_sms.sms_api_url,
             params=self._prepare_sms_api_playsms_credit_check_params(),
         )
-        #_logger.debug(f"URL from iap_account: {SMS_API_URL} . Paramerters: {params}")
-        
+
         response_content = response.json()  # Parse the JSON response
         _logger.debug(f"PlaySMS credit balance check responded with: {response_content}")
 
@@ -97,7 +89,7 @@ class IapAccount(models.Model):
            return current_credit_balance
         else:
            error_code = response_content['error']
-           error_msg = response_content['error_string'] 
+           error_msg = response_content['error_string']
         raise UserWarning(error_msg)
 
     @api.model

@@ -25,7 +25,6 @@ class Sms(models.Model):
             "h": iap_account.sms_api_password,
             "from": iap_account.sms_api_from,
             "to": self.number,
-            #"cc": parsed_number.country_code,
             "msg": self.body,
             }
 
