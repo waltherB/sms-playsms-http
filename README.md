@@ -2,7 +2,8 @@ PlaySMS Connector
 =================
 This module implements the PlaySMS webservices api, and replaces the Odoo sms IAP.
 
-Requirements are iap_alternative_provider and phone_validation
+Odoo app requirements are: iap_alternative_provider and phone_validation
+Python requirements are: phonenumbers and requests
 
 Configuration
 =============
