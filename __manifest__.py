@@ -18,5 +18,5 @@
         'views/sms_sms.xml',
         'views/sms_resend.xml'
     ],
-    'images': ['static/description/smsapi_banner.png'],
+    'images': ['static/description/playsms.png'],
 }
