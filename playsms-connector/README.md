@@ -12,6 +12,7 @@ Go to: Settings > Technical > IAP > IAP Accounts
 
 When you set the Provider of an IAP account to PlaySMS, the following
 section will appear.
+![billede](https://github.com/user-attachments/assets/18219aff-5c89-4e06-ab32-50c0c1fa776e)
 
 ![IAP PlaySMS form](https://github.com/waltherB/sms-playsms-http/blob/17/playsms-connector/static/description/IAP_form.png?raw=true)
 
