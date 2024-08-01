@@ -13,7 +13,8 @@ Go to: Settings > Technical > IAP > IAP Accounts
 When you set the Provider of an IAP account to PlaySMS, the following
 section will appear.
 
-!(https://github.com/waltherB/sms-playsms-http/blob/17/playsms-connector/static/description/IAP_form.png)
+![IAP PlaySMS form](https://github.com/waltherB/sms-playsms-http/blob/17/playsms-connector/static/description/IAP_form.png)
+
 
 - Service Name must be *sms*.
 
