@@ -3,7 +3,7 @@
     'name': "PlaySMS Connector",
     'summary': "Send SMS with PlaySMS",
     'author': "Walther Barnett",
-    'website': "https://gundogpro.dk",
+    'website': "https://github.com/waltherB/sms-playsms-http",
     'license': 'AGPL-3',
     'category': 'Technical',
     'version': '17.0.1.0.0',
