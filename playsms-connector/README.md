@@ -20,7 +20,7 @@ section will appear.
   are required, and are based on your `PlaySMS` account.The URL should be e.g.:
   **https://playsms.example.com/index.php?op=ws**
 
-- After filling out the required fields, it is recommended to *Test
+- After filling in the required fields, it is recommended to *Test
   Connection*. Result will be displayed in the *Connection status*
   field.
 
