@@ -38,7 +38,7 @@ you can access the action by:
 - Settings > Technical > Automation > Scheduled action
 - Select the action named “PlaySMS: Check credit balance”.
 
-We have prepared a default notification action that creates an activity
+There's a default notification action that creates an activity
 for the admin under the SMS IAP, notifying him to “Buy more credits".
 
 This module is strongly inspired by the  following module https://github.com/rokpremrl/smsapisi-odoo
