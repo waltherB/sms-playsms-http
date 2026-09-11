@@ -42,3 +42,14 @@ There's a default notification action that creates an activity
 for the admin under the SMS IAP, notifying him to “Buy more credits".
 
 This module is strongly inspired by the  following module https://github.com/rokpremrl/smsapisi-odoo
+
+
+---
+
+## Odoo 18.0 port note
+
+This branch contains an Odoo 18.0 port of the module, prepared by
+Entuura (Asia) Limited (Steven Uggowitzer, <steven@entuura.org>). Same
+AGPL-3 licence. See [PORT_NOTES.md](../PORT_NOTES.md) at the repository
+root for the full change list — kept minimal so the diff against 17.0 is
+easy to review.
