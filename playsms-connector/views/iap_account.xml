@@ -1,4 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" ?>
+<!--
+  Copyright 2024 Walther Barnett (original 17.0 author)
+  Copyright 2026 Entuura (Asia) Limited — 18.0 port
+  @author Steven Uggowitzer <steven@entuura.org>
+  License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl).
+-->
 <odoo>
     <record id="iap_account_view_form" model="ir.ui.view">
         <field name="name">playsms.iap.account.view.form</field>
@@ -24,13 +30,9 @@
                 </group>
             </xpath>
 
-            <!-- Chatter -->
+            <!-- Chatter (Odoo 18 shortcut tag) -->
             <xpath expr="//sheet" position="after">
-                <div class="oe_chatter">
-                    <field name="message_follower_ids" groups="base.group_user"/>
-                    <field name="activity_ids"/>
-                    <field name="message_ids"/>
-                </div>
+                <chatter/>
             </xpath>
         </field>
     </record>
